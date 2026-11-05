@@ -1,0 +1,130 @@
+/* Base & Layout */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+    min-height: 100vh;
+    color: #333;
+    padding: 20px;
+}
+
+.main-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+/* Header */
+header { text-align: center; margin-bottom: 40px; color: white; }
+h1 { font-size: 3rem; font-weight: 800; }
+h1 span { color: #f1c40f; }
+.subtitle { font-weight: 300; opacity: 0.8; margin-top: 5px; }
+
+/* Search */
+.search-wrapper {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 5px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+.input-icon {
+    display: flex;
+    background: white;
+    border-radius: 12px;
+    padding: 5px 20px;
+    align-items: center;
+}
+input { flex: 1; border: none; font-size: 1.2rem; padding: 12px 0; outline: none; background: transparent; }
+input::placeholder { color: #999; }
+
+/* Info Verbe */
+#verbe-info {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Tabs System */
+.tabs-container {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.tabs-menu {
+    display: flex;
+    background: #f8f9fa;
+    border-bottom: 1px solid #eee;
+    overflow-x: auto; /* Scroll sur mobile si trop de modes */
+}
+
+.tab-btn {
+    padding: 15px 25px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: #666;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.tab-btn:hover { background: #e9ecef; }
+.tab-btn.active {
+    background: white;
+    color: #4ca1af;
+    border-bottom: 3px solid #4ca1af;
+}
+
+.tab-content {
+    padding: 30px;
+    min-height: 300px;
+}
+
+/* Grille des temps */
+.tenses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.tense-card {
+    background: #fdfdfd;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.tense-title {
+    color: #2c3e50;
+    font-weight: 700;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f1c40f;
+    display: inline-block;
+}
+
+.conj-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    border-bottom: 1px dashed #f0f0f0;
+    font-size: 0.95rem;
+}
+
+.conj-row:last-child { border-bottom: none; }
+.pronoun { color: #888; font-weight: 400; }
+.verb { font-weight: 600; color: #2c3e50; }
+
+/* Mobile */
+@media (max-width: 600px) {
+    h1 { font-size: 2rem; }
+    .tabs-menu { justify-content: flex-start; } /* Force scroll si besoin */
+    .tab-content { padding: 15px; }
+}

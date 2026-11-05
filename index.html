@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conjugueur Complet </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <header>
+            <h1>Le Conjugueur<span>Pro</span></h1>
+            <p class="subtitle">Tous les modes, tous les temps</p>
+        </header>
+
+        <div class="search-wrapper">
+            <div class="input-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <input type="text" id="verbeInput" placeholder="Tapez un verbe (ex: aimer, finir, prendre)...">
+            </div>
+        </div>
+
+        <div id="verbe-info"></div>
+
+        <!-- Système d'onglets -->
+        <div class="tabs-container">
+            <div class="tabs-menu" id="tabsMenu"></div>
+            <div class="tab-content" id="tabContent"></div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
